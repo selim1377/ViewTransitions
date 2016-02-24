@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoubleTapViewController : UIViewController <UIViewControllerTransitioningDelegate>
+@interface DoubleTapViewController : UIViewController <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic,strong) IBOutlet id <UIViewControllerAnimatedTransitioning> presentingTransitionDelegate;
 @property (nonatomic,strong) IBOutlet id <UIViewControllerAnimatedTransitioning> dismissingTransitionDelegate;

@@ -12,6 +12,8 @@
 		1E38557D1C7C8D9200E5AC1C /* FadeOutTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E38557C1C7C8D9200E5AC1C /* FadeOutTransition.m */; };
 		1E3855821C7C8F5F00E5AC1C /* ScaleDownTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3855811C7C8F5F00E5AC1C /* ScaleDownTransition.m */; };
 		1E3855851C7C95D000E5AC1C /* CubeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3855841C7C95D000E5AC1C /* CubeTransition.m */; };
+		1E7C74DF1C7DF28F00AF94C5 /* ImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C74DE1C7DF28F00AF94C5 /* ImageTransition.m */; };
+		1E7C74E21C7DF6DD00AF94C5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C74E11C7DF6DD00AF94C5 /* ProfileViewController.m */; };
 		1E8145891C171B1500E677D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8145881C171B1500E677D3 /* main.m */; };
 		1E81458C1C171B1500E677D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E81458B1C171B1500E677D3 /* AppDelegate.m */; };
 		1E81458F1C171B1500E677D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E81458E1C171B1500E677D3 /* ViewController.m */; };
@@ -44,6 +46,10 @@
 		1E3855811C7C8F5F00E5AC1C /* ScaleDownTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleDownTransition.m; sourceTree = "<group>"; };
 		1E3855831C7C95D000E5AC1C /* CubeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeTransition.h; sourceTree = "<group>"; };
 		1E3855841C7C95D000E5AC1C /* CubeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeTransition.m; sourceTree = "<group>"; };
+		1E7C74DD1C7DF28F00AF94C5 /* ImageTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransition.h; sourceTree = "<group>"; };
+		1E7C74DE1C7DF28F00AF94C5 /* ImageTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransition.m; sourceTree = "<group>"; };
+		1E7C74E01C7DF6DD00AF94C5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		1E7C74E11C7DF6DD00AF94C5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		1E8145841C171B1500E677D3 /* ViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8145881C171B1500E677D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E81458A1C171B1500E677D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 			children = (
 				1E3855751C7C86C400E5AC1C /* DoubleTapViewController.h */,
 				1E3855761C7C86C400E5AC1C /* DoubleTapViewController.m */,
+				1E7C74E01C7DF6DD00AF94C5 /* ProfileViewController.h */,
+				1E7C74E11C7DF6DD00AF94C5 /* ProfileViewController.m */,
 			);
 			name = Targets;
 			sourceTree = "<group>";
@@ -108,6 +116,8 @@
 				1E3855791C7C883800E5AC1C /* ModalPresentationTransition.m */,
 				1E3855831C7C95D000E5AC1C /* CubeTransition.h */,
 				1E3855841C7C95D000E5AC1C /* CubeTransition.m */,
+				1E7C74DD1C7DF28F00AF94C5 /* ImageTransition.h */,
+				1E7C74DE1C7DF28F00AF94C5 /* ImageTransition.m */,
 			);
 			name = Presenting;
 			sourceTree = "<group>";
@@ -286,7 +296,9 @@
 				1E38557A1C7C883800E5AC1C /* ModalPresentationTransition.m in Sources */,
 				1E3855821C7C8F5F00E5AC1C /* ScaleDownTransition.m in Sources */,
 				1E3855851C7C95D000E5AC1C /* CubeTransition.m in Sources */,
+				1E7C74DF1C7DF28F00AF94C5 /* ImageTransition.m in Sources */,
 				1E8145AE1C171B5000E677D3 /* DestinationViewController.m in Sources */,
+				1E7C74E21C7DF6DD00AF94C5 /* ProfileViewController.m in Sources */,
 				1E3855771C7C86C400E5AC1C /* DoubleTapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

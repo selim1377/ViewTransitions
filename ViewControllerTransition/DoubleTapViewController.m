@@ -17,14 +17,20 @@
     UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
     doubletap.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:doubletap];
+    
+    
 }
 
 
 -(void)dismiss:(UIGestureRecognizer *)gesture
 {
+    self.navigationController.delegate = nil;
+    
     [self dismissViewControllerAnimated:YES
                              completion:NULL];
 }
+
+#pragma mark - TransitioningDelegate
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {

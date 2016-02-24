@@ -12,12 +12,16 @@
 
 -(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 1.0;
+    return 2.0;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *source = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *target = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    UIView *containerView = [transitionContext containerView];
+    [containerView insertSubview:target.view belowSubview:source.view];
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
@@ -26,7 +30,6 @@
                          source.view.alpha = 0.0f;
                      }
                      completion:^(BOOL finished) {
-                         
                          [transitionContext completeTransition:YES];
                      }];
     

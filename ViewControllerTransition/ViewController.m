@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "SettingTransition.h"
 #import "DoubleTapViewController.h"
+#import "ProfileViewController.h"
+#import "ImageTransition.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate>
 
@@ -25,6 +27,21 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.transition = [SettingTransition new];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(pushImage:)];
+    tap.numberOfTapsRequired = 2;
+    [self.imageView addGestureRecognizer:tap];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,15 +67,26 @@
 {
     UIViewController *destination = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"destination"];
     destination.transitioningDelegate = self;
-    destination.modalPresentationStyle = UIModalPresentationCustom;
+    destination.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:destination animated:YES completion:nil];
 }
 
 - (IBAction)modelPresentation:(id)sender
 {
     DoubleTapViewController *destination = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"modalPresentation"];
-    destination.modalPresentationStyle = UIModalPresentationCustom;
+    destination.modalPresentationStyle = UIModalPresentationFullScreen;
     destination.transitioningDelegate = destination;
     [self presentViewController:destination animated:YES completion:nil];
 }
+
+-(void)pushImage:(UITapGestureRecognizer *)gesture
+{
+    ProfileViewController *profile = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"imageTransition"];
+    profile.snapshot = self.imageView;
+    profile.transitioningDelegate = profile;
+    self.navigationController.delegate = profile;
+    [self.navigationController pushViewController:profile animated:YES];
+    
+}
+
 @end

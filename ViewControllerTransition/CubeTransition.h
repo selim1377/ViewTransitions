@@ -11,4 +11,6 @@
 
 @interface CubeTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
+@property (nonatomic,strong) NSNumber *reverse;
+
 @end

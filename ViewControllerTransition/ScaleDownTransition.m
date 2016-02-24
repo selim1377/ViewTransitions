@@ -27,6 +27,8 @@
     sourceSnap.frame   = source.view.frame;
     [containerView addSubview:sourceSnap];
     
+    [containerView insertSubview:target.view belowSubview:source.view];
+    
     [source.view removeFromSuperview];
     
     // Initial animation configuration

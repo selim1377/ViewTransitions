@@ -17,8 +17,6 @@
     UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
     doubletap.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:doubletap];
-    
-    
 }
 
 
@@ -28,6 +26,12 @@
     
     [self dismissViewControllerAnimated:YES
                              completion:NULL];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 #pragma mark - TransitioningDelegate

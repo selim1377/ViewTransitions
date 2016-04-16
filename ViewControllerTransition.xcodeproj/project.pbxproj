@@ -23,6 +23,8 @@
 		1E8145A21C171B1500E677D3 /* ViewControllerTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8145A11C171B1500E677D3 /* ViewControllerTransitionTests.m */; };
 		1E8145AE1C171B5000E677D3 /* DestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8145AD1C171B5000E677D3 /* DestinationViewController.m */; };
 		1E8145B11C171DFE00E677D3 /* SettingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8145B01C171DFE00E677D3 /* SettingTransition.m */; };
+		8FA10EEE1C7E24F800C23724 /* PiecesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA10EED1C7E24F800C23724 /* PiecesViewController.m */; };
+		8FA10EF11C7E27FF00C23724 /* PiecesTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA10EF01C7E27FF00C23724 /* PiecesTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		1E8145AD1C171B5000E677D3 /* DestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewController.m; sourceTree = "<group>"; };
 		1E8145AF1C171DFE00E677D3 /* SettingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTransition.h; sourceTree = "<group>"; };
 		1E8145B01C171DFE00E677D3 /* SettingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTransition.m; sourceTree = "<group>"; };
+		8FA10EEC1C7E24F800C23724 /* PiecesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiecesViewController.h; sourceTree = "<group>"; };
+		8FA10EED1C7E24F800C23724 /* PiecesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiecesViewController.m; sourceTree = "<group>"; };
+		8FA10EEF1C7E27FF00C23724 /* PiecesTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiecesTransition.h; sourceTree = "<group>"; };
+		8FA10EF01C7E27FF00C23724 /* PiecesTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiecesTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 				1E3855761C7C86C400E5AC1C /* DoubleTapViewController.m */,
 				1E7C74E01C7DF6DD00AF94C5 /* ProfileViewController.h */,
 				1E7C74E11C7DF6DD00AF94C5 /* ProfileViewController.m */,
+				8FA10EEC1C7E24F800C23724 /* PiecesViewController.h */,
+				8FA10EED1C7E24F800C23724 /* PiecesViewController.m */,
 			);
 			name = Targets;
 			sourceTree = "<group>";
@@ -129,6 +137,8 @@
 				1E38557C1C7C8D9200E5AC1C /* FadeOutTransition.m */,
 				1E3855801C7C8F5F00E5AC1C /* ScaleDownTransition.h */,
 				1E3855811C7C8F5F00E5AC1C /* ScaleDownTransition.m */,
+				8FA10EEF1C7E27FF00C23724 /* PiecesTransition.h */,
+				8FA10EF01C7E27FF00C23724 /* PiecesTransition.m */,
 			);
 			name = Dismissing;
 			sourceTree = "<group>";
@@ -289,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E81458F1C171B1500E677D3 /* ViewController.m in Sources */,
+				8FA10EEE1C7E24F800C23724 /* PiecesViewController.m in Sources */,
 				1E38557D1C7C8D9200E5AC1C /* FadeOutTransition.m in Sources */,
 				1E81458C1C171B1500E677D3 /* AppDelegate.m in Sources */,
 				1E8145891C171B1500E677D3 /* main.m in Sources */,
@@ -300,6 +311,7 @@
 				1E8145AE1C171B5000E677D3 /* DestinationViewController.m in Sources */,
 				1E7C74E21C7DF6DD00AF94C5 /* ProfileViewController.m in Sources */,
 				1E3855771C7C86C400E5AC1C /* DoubleTapViewController.m in Sources */,
+				8FA10EF11C7E27FF00C23724 /* PiecesTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

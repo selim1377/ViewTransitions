@@ -18,11 +18,13 @@
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *source = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
     UIViewController *target = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = [transitionContext containerView];
+    
     CGRect finalFrame     = [transitionContext finalFrameForViewController:target];
-    CGRect initialFrame   = CGRectOffset(finalFrame, 0, finalFrame.size.width);
+    CGRect initialFrame   = CGRectOffset(finalFrame, 0, finalFrame.size.height);
     
     target.view.frame = initialFrame;
     [containerView addSubview:target.view];

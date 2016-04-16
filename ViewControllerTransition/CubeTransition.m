@@ -37,7 +37,7 @@
     CATransform3D fromTransform =  CATransform3DMakeRotation(direction * M_PI_2, 0.0, 1.0, 0.0);
     CATransform3D toTransform = CATransform3DMakeRotation(-direction * M_PI_2, 0.0, 1.0, 0.0);
     fromTransform.m34 = constant;
-    toTransform.m34 = constant;
+    toTransform.m34   = constant;
     
     containerView.transform = CGAffineTransformMakeTranslation(direction * containerView.frame.size.width / 2.0, 0);
     toView.layer.transform = toTransform;

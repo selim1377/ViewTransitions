@@ -10,12 +10,14 @@
 #import "SettingTransition.h"
 #import "DoubleTapViewController.h"
 #import "ProfileViewController.h"
+#import "PiecesViewController.h"
 #import "ImageTransition.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate>
 
 - (IBAction)openDestination:(id)sender;
 - (IBAction)modelPresentation:(id)sender;
+- (IBAction)piecesTransition:(id)sender;
 
 @property (nonatomic,strong) SettingTransition *transition;
 @end
@@ -37,6 +39,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -73,7 +81,15 @@
 
 - (IBAction)modelPresentation:(id)sender
 {
-    DoubleTapViewController *destination = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"modalPresentation"];
+    PiecesViewController *destination = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"modalPresentation"];
+    destination.modalPresentationStyle = UIModalPresentationFullScreen;
+    destination.transitioningDelegate = destination;
+    [self presentViewController:destination animated:YES completion:nil];
+}
+
+- (IBAction)piecesTransition:(id)sender
+{
+    PiecesViewController *destination = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"piecesTransition"];
     destination.modalPresentationStyle = UIModalPresentationFullScreen;
     destination.transitioningDelegate = destination;
     [self presentViewController:destination animated:YES completion:nil];
